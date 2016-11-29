@@ -1,0 +1,17 @@
+{
+	"title" : "Best practices - non generic components in teams",
+	"url" : "http://10.25.31.4:8080/training/mb_dev_best_practices-non_generic_components_in_teams.mp4",
+	"description" : "How and where to develop your own specific components when developing with Misysboard",
+	"author" : "DAVID BOCLE",
+	"date" : "2016/08/17",
+	"dateRange" : "17 AUGUST 2016",
+	"time" : "00:06:00",
+	"level" : "developper",
+	"tags" : " label label-danger",
+	"category" : "best parctices",
+	"color" : "label label-warning",
+	"poster" : "app/icons/posters/BP-ngct.png",
+	"image" : "app/icons/developper.png",
+	"id" : "best-practices-non-generic-components-in-teams",
+	"url-id" : "/video/?id=gdynia-qa-workshop-5"
+},
