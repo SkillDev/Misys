@@ -47,10 +47,9 @@ var app = angular.module("misys", ["ngJsonEditor"]);
 					$http.post('sample.json', $scope.data).then(function(data) {
 						console.log("updated");
 					});
-					$scope.msg = JSON.stringify($scope.data);
 				}
 			},
 			restrict: 'E',
-			template: "	<form ng-submit='updateJson(content)'><div ng-repeat='(key, content) in data'><label>{{key}}</label><input type='text' ng-model='content'></div><button>Update Json</button><p>{{msg}}</p></form>"
+			template: "<jsoneditor ng-model='json.data' options='jsoneditorOptions' json='json'></jsoneditor>"
 		}
 	});

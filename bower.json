@@ -4,6 +4,11 @@
   "authors": [
     "skilldev <anton_m@epitech.eu>"
   ],
+  "dependencies": {
+    "angular": ">=1.0.6",
+    "jsoneditor": "~3.1.2",
+    "angular-jsoneditor": "1.0.0"
+  },
   "description": "",
   "main": "",
   "license": "MIT"
