@@ -7,7 +7,7 @@
   "dependencies": {
     "angular": ">=1.0.6",
     "jsoneditor": "~3.1.2",
-    "angular-jsoneditor"
+    "angular-jsoneditor" : "v1.0"
   },
   "description": "",
   "main": "",
