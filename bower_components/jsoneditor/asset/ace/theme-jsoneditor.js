@@ -28,7 +28,7 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
-ace.define('ace/theme/jsoneditor', ['require', 'exports', 'module', 'ace/lib/dom'], function(acequire, exports, module) {
+define('ace/theme/jsoneditor', ['require', 'exports', 'module' , 'ace/lib/dom'], function(require, exports, module) {
 
 exports.isDark = false;
 exports.cssClass = "ace-jsoneditor";
@@ -38,7 +38,7 @@ color: #333\
 }\
 \
 .ace-jsoneditor.ace_editor {\
-font-family: droid sans mono, consolas, monospace, courier new, courier, sans-serif;\
+font-family: droid sans mono, monospace, courier new, courier, sans-serif;\
 line-height: 1.3;\
 }\
 .ace-jsoneditor .ace_print-margin {\
@@ -139,6 +139,6 @@ text-decoration: underline\
 background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y\
 }";
 
-var dom = acequire("../lib/dom");
+var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });

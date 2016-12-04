@@ -23,8 +23,31 @@ To implement JSONEditor in a web application, load the javascript and css file
 in the head of the HTML page:
 
 ```html
-<link href="jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
-<script src="jsoneditor/dist/jsoneditor.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jsoneditor/jsoneditor.min.css">
+<script type="text/javascript" src="jsoneditor/jsoneditor.min.js"></script>
+```
+
+### Detailed error messages
+
+Optionally, [jsonlint](https://github.com/zaach/jsonlint) can be loaded to get
+more detailed error messages.
+
+```html
+<script type="text/javascript" src="jsoneditor/asset/jsonlint/jsonlint.js"></script>
+```
+
+### Code editor
+
+The mode 'code' requires the [Ace editor](http://ace.ajax.org/) to be loaded.
+JSON Editor comes with a custom built version of Ace containing the ace modules
+`ace.js`, `ext-searchbox.js`, `mode-json.js`, `theme-textmate.js`, and a custom
+theme `theme-jsoneditor.js`.
+Besides loading ace, the content type must be specified on the page.
+
+```html
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<script type="text/javascript" src="jsoneditor/asset/ace/ace.js"></script>
 ```
 
 ## Use
@@ -72,11 +95,8 @@ var json = editor.get();
 <!DOCTYPE HTML>
 <html>
 <head>
-    <!-- when using the mode "code", it's important to specify charset utf-8 -->
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-
-    <link href="jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
-    <script src="jsoneditor/dist/jsoneditor.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="jsoneditor/jsoneditor.min.css">
+    <script type="text/javascript" src="jsoneditor/jsoneditor.min.js"></script>
 </head>
 <body>
 <p>
@@ -85,7 +105,7 @@ var json = editor.get();
 </p>
 <div id="jsoneditor" style="width: 400px; height: 400px;"></div>
 
-<script>
+<script type="text/javascript" >
     // create the editor
     var container = document.getElementById("jsoneditor");
     var editor = new JSONEditor(container);

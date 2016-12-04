@@ -2,12 +2,17 @@
 <html>
 <head>
   <title>JSONEditor | Switch mode</title>
-
-  <!-- when using the mode "code", it's important to specify charset utf-8 -->
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-  <link href="../dist/jsoneditor.css" rel="stylesheet" type="text/css">
-  <script src="../dist/jsoneditor.js"></script>
+  <!-- json editor -->
+  <link rel="stylesheet" type="text/css" href="../jsoneditor.css">
+  <script type="text/javascript" src="../jsoneditor.js"></script>
+
+  <!-- ace editor -->
+  <script type="text/javascript" src="../asset/ace/ace.js"></script>
+
+  <!-- json lint -->
+  <script type="text/javascript" src="../asset/jsonlint/jsonlint.js"></script>
 
   <style type="text/css">
     body {
@@ -37,7 +42,7 @@
 
 <div id="jsoneditor"></div>
 
-<script>
+<script type="text/javascript" >
   var container = document.getElementById('jsoneditor');
 
   var options = {
