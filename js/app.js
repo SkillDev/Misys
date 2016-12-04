@@ -1,4 +1,4 @@
-var app = angular.module("misys", []);
+var app = angular.module("misys", ["ngJsonEditor"]);
 /*app.controller("InputController", function($scope, $http) {*/
 /*	console.log(typeof("http://10.25.31.4:8080/training/mb_dev_best_practices-non_generic_components_in_teams.mp4"));
 */
@@ -37,8 +37,12 @@ var app = angular.module("misys", []);
 		return {
 			controller : function ($scope, $http) {
 				$http.get("sample.json").then(function(data) {
-					$scope.data = data.data;
+					$scope.json = data.data;
 				});
+
+				$scope.jsoneditorOptions = {
+					"name": 'Json'
+				};
 				$scope.updateJson = function () {
 					$http.post('sample.json', $scope.data).then(function(data) {
 						console.log("updated");
@@ -47,6 +51,6 @@ var app = angular.module("misys", []);
 				}
 			},
 			restrict: 'E',
-			template: "	<form ng-submit='updateJson(content)'><div ng-repeat='(key, content) in data'><label>{{key}}</label><input type='text' ng-model='content'></div><button>Update Json</button><p>{{msg}}</p></form>"
+			template: "	<jsoneditor options='jsoneditorOptions' json='json'></jsoneditor><form ng-submit='updateJson(content)'><div ng-repeat='(key, content) in data'><label>{{key}}</label><input type='text' ng-model='content'></div><button>Update Json</button><p>{{msg}}</p></form>"
 		}
 	});
