@@ -36,7 +36,7 @@ var app = angular.module("misys", ["ngJsonEditor"]);
 	app.directive('myInput', function() {
 		return {
 			controller : function ($scope, $http) {
-				$http.get("sample.json").then(function(data) {
+				$http.get("bower_components/Misys/sample.json").then(function(data) {
 					$scope.json = data.data;
 				});
 
